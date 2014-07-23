@@ -28,9 +28,8 @@ class Room:
         which_door = raw_input('In ' + self.name + ', pick one of the following doors: ' +
                                ', '.join(self.door_list) + '. -> ')
 
-        which_door_len = len(which_door)
-        if which_door_len >= 1: which_door = which_door.strip()
-        if which_door_len >= 1: which_door = which_door.lower()
+        if which_door: which_door = which_door.strip()
+        if which_door: which_door = which_door.lower()
 
         while which_door not in self.door_list:
             which_door = raw_input('Invalid choice, try again -> ')
